@@ -1,6 +1,0 @@
-[submodule "db-kreditkarte-qif/blob"]
-	path = db-kreditkarte-qif/blob
-	url = https://github.com/eligrey/Blob.js.git
-[submodule "db-kreditkarte-qif/filesaver"]
-	path = db-kreditkarte-qif/filesaver
-	url = https://github.com/eligrey/FileSaver.js.git
