@@ -2,7 +2,7 @@
 // @name DB Kreditkarte QIF
 // @namespace http://slowpoke.de/
 // @description Fügt dem BahnCard Kreditkartenbankings unter https://www.kreditkartenbanking.de/bahncard eine Exportfunktion für das QIF Format hinzu.
-// @version 1.0.0
+// @version 1.0.1
 // @downloadURL https://github.com/panzerfahrer/userscripts/raw/master/db-kreditkarte-qif/db-kreditkarte_qif.user.js
 // @updateURL https://github.com/panzerfahrer/userscripts/raw/master/db-kreditkarte-wiso-qif/update.user.js
 // @include https://www.kreditkartenbanking.de/bahncard/cos_std/dispatch.do*
@@ -68,7 +68,7 @@ function exportQIF(){
 	var blob = new Blob(qif, {type: "text/plain;charset=ascii"});
 	var title = $("#StatementContent > table > tbody > tr:nth-child(2) > td > table:nth-child(1) > tbody > tr:nth-child(2) > td > h2").text();
 	title = title.replace(/[\s\t-]{2,}/g, " ").trim();
-	saveAs(blob, title + ".txt");
+	saveAs(blob, title + ".qif");
 }
 
 function transform(){
